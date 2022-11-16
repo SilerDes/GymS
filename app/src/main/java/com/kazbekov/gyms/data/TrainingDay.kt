@@ -1,7 +1,7 @@
 package com.kazbekov.gyms.data
 
 data class TrainingDay(
-    val dayNumber: Int,
+    val trainingNumber: Int,
     val startOfTraining: Long,
     var endOfTraining: Long? = null,
     var isFinished: Boolean = false,

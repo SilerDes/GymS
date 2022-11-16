@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GymS</string>
+    <string name="start_training_button">Начать новую тренировку</string>
+    <string name="training_text_view">Тренировка #</string>
+    <string name="training_time_text_view">Время тренировки:</string>
+    <string name="clarification_time_text_view">в минутах</string>
+    <string name="scheme_text_view">Схема:</string>
+</resources>

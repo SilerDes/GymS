@@ -23,10 +23,18 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentMainBinding.bind(view)
+
+        observerLiveData()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun observerLiveData() {
+        mainViewModel.trainings.observe(viewLifecycleOwner) {
+            TODO("process when markup will be created")
+        }
     }
 }
