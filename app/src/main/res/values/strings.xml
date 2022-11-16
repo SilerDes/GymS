@@ -5,4 +5,5 @@
     <string name="training_time_text_view">Training time:</string>
     <string name="clarification_time_text_view">in minutes</string>
     <string name="scheme_text_view">Scheme:</string>
+    <string name="training_process">In Process</string>
 </resources>

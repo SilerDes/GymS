@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.kazbekov.gyms.R
 import com.kazbekov.gyms.databinding.FragmentMainBinding
 import com.kazbekov.gyms.viewModels.MainViewModel
@@ -27,6 +28,14 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         observerLiveData()
     }
 
+    override fun onStart() {
+        super.onStart()
+
+        binding.startTraining.setOnClickListener {
+            startTraining()
+        }
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
@@ -36,5 +45,9 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         mainViewModel.trainings.observe(viewLifecycleOwner) {
             TODO("process when markup will be created")
         }
+    }
+
+    private fun startTraining() {
+        findNavController().navigate(R.id.action_mainFragment_to_createTrainingFragment)
     }
 }
