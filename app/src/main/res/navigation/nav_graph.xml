@@ -13,10 +13,27 @@
         <action
             android:id="@+id/action_mainFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_createTrainingFragment"
+            app:destination="@id/createTrainingFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.kazbekov.gyms.DetailFragment"
+        android:name="com.kazbekov.gyms.fragments.DetailFragment"
         android:label="DetailFragment"
         tools:layout="@layout/fragment_detail"/>
+    <fragment
+        android:id="@+id/createTrainingFragment"
+        android:name="com.kazbekov.gyms.fragments.CreateTrainingFragment"
+        android:label="CreateTrainingFragment"
+        tools:layout="@layout/fragment_new_training">
+        <action
+            android:id="@+id/action_createTrainingFragment_to_createTrainingSchemeFragment"
+            app:destination="@id/createTrainingSchemeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createTrainingSchemeFragment"
+        android:name="com.kazbekov.gyms.fragments.CreateTrainingSchemeFragment"
+        android:label="CreateTrainingSchemeFragment"
+        tools:layout="@layout/fragment_new_scheme"/>
 </navigation>

@@ -1,6 +1,7 @@
-package com.kazbekov.gyms
+package com.kazbekov.gyms.fragments
 
 import androidx.fragment.app.Fragment
+import com.kazbekov.gyms.R
 
 /**
  *
