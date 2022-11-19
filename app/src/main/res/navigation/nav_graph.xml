@@ -21,7 +21,11 @@
         android:id="@+id/detailFragment"
         android:name="com.kazbekov.gyms.fragments.DetailFragment"
         android:label="DetailFragment"
-        tools:layout="@layout/fragment_detail"/>
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="training"
+            app:argType="com.kazbekov.gyms.data.TrainingDay" />
+    </fragment>
     <fragment
         android:id="@+id/createTrainingFragment"
         android:name="com.kazbekov.gyms.fragments.CreateTrainingFragment"
