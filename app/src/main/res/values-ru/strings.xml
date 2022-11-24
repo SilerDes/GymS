@@ -7,4 +7,7 @@
     <string name="clarification_time_text_view">в минутах</string>
     <string name="scheme_text_view">Схема:</string>
     <string name="training_process">В процессе</string>
+    <string name="save_button">Сохранить</string>
+    <string name="finish_training_button">Закончить</string>
+    <string name="exercise_progress_hint">28 раз</string>
 </resources>
