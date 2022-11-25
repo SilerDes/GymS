@@ -8,7 +8,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kazbekov.gyms.R
 import com.kazbekov.gyms.adapters.TrainingAdapter
+import com.kazbekov.gyms.data.TrainingDay
 import com.kazbekov.gyms.databinding.FragmentMainBinding
+import com.kazbekov.gyms.fragments.DetailFragment
 import com.kazbekov.gyms.viewModels.MainViewModel
 
 /**
@@ -30,6 +32,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
         initList()
         observeLiveData()
+        observeSavedStateHandle()
     }
 
     override fun onStart() {
@@ -50,6 +53,14 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         mainViewModel.trainings.observe(viewLifecycleOwner) {
             trainingAdapter?.submitList(it)
         }
+    }
+
+    private fun observeSavedStateHandle() {
+        findNavController().currentBackStackEntry?.savedStateHandle?.getLiveData<TrainingDay>(
+            DetailFragment.KEY_TRAINING_RESULT
+        )?.observe(viewLifecycleOwner) {
+            mainViewModel.updateTraining(it)
+        } ?: error("currentBackStackEntry is null")
     }
 
     private fun initList() {

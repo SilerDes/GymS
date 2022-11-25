@@ -9,4 +9,5 @@
     <string name="save_button">Save</string>
     <string name="finish_training_button">Finish</string>
     <string name="exercise_progress_hint">28 times</string>
+    <string name="number_format_error">You must enter a number</string>
 </resources>

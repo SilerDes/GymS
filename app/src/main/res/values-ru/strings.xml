@@ -10,4 +10,5 @@
     <string name="save_button">Сохранить</string>
     <string name="finish_training_button">Закончить</string>
     <string name="exercise_progress_hint">28 раз</string>
+    <string name="number_format_error">Вы должны ввести число</string>
 </resources>
