@@ -10,5 +10,5 @@ data class TrainingDay(
     var endOfTraining: Long? = null,
     var isFinished: Boolean = false,
     val trainingScheme: TrainingScheme,
-    var resultExercises: List<Int> = emptyList()
+    var resultExercises: List<Int> = List(trainingScheme.exercises.size) { 0 }
 ) : Parcelable

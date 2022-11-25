@@ -1,6 +1,7 @@
 package com.kazbekov.gyms.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.core.view.children
 import androidx.core.view.get
@@ -47,6 +48,8 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
 
         binding.finishTraining.setOnClickListener {
             viewModel.trainingDay!!.endOfTraining = System.currentTimeMillis()
+            Log.d("test1", "${viewModel.trainingDay!!.startOfTraining}")
+            Log.d("test1", "${viewModel.trainingDay!!.endOfTraining}")
             viewModel.trainingDay!!.isFinished = true
         }
     }

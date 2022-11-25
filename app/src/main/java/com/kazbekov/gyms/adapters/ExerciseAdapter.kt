@@ -66,7 +66,7 @@ class ExerciseAdapter(
 
         fun bind(exercise: String, result: Int) {
             exerciseName.text = exercise
-            exerciseProgress.text = (if (result != 0) result else "") as Editable
+            exerciseProgress.setText((if (result != 0) result.toString() else ""))
         }
     }
 }
